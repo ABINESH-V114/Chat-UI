@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sky Blue Chat UI</title>
+  <title>SkyChat – Initial Avatar UI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Theme -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            glass: 'rgba(255,255,255,0.25)',
+            glass: 'rgba(255,255,255,0.3)',
             sky1: '#38bdf8',
             sky2: '#0ea5e9',
             sky3: '#7dd3fc',
@@ -29,70 +28,75 @@
     body {
       background: linear-gradient(135deg, #e0f2fe, #bae6fd, #7dd3fc);
     }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(#38bdf8, #0ea5e9);
-      border-radius: 10px;
-    }
   </style>
 </head>
 
-<body class="h-screen text-slate-800 font-sans antialiased">
+<body class="h-screen font-sans text-slate-800">
 
-<div class="max-w-7xl mx-auto h-full flex p-6 gap-6">
+<div class="max-w-7xl mx-auto h-full flex gap-6 p-6">
 
-  <!-- ============ SIDEBAR ============ -->
-  <aside class="w-80 rounded-3xl bg-glass backdrop-blur-xl border border-white/40 flex flex-col shadow-2xl">
+  <!-- SIDEBAR -->
+  <aside class="w-80 rounded-3xl bg-glass backdrop-blur-xl border border-white/40 shadow-2xl flex flex-col">
 
     <div class="p-6 border-b border-white/30">
       <h1 class="text-xl font-semibold text-skyDark">SkyChat 💬</h1>
-      <p class="text-sm text-slate-600">Professional conversations</p>
+      <p class="text-sm text-slate-600">Enterprise Messaging</p>
     </div>
 
     <div class="flex-1 overflow-y-auto">
 
-      <!-- Active -->
+      <!-- Active Chat -->
       <div class="flex items-center gap-4 px-6 py-4 bg-white/40 border-l-4 border-sky2">
-        <img src="https://randomuser.me/api/portraits/men/11.jpg" class="w-12 h-12 rounded-full" />
+        <div class="w-12 h-12 rounded-full bg-sky2 text-white flex items-center justify-center font-semibold text-lg">
+          A
+        </div>
         <div class="flex-1">
-          <p class="font-medium text-skyDark">Rahul Verma</p>
+          <p class="font-medium text-skyDark">Arjun Malhotra</p>
           <p class="text-sm text-slate-600">Typing…</p>
         </div>
         <span class="text-xs text-slate-500">Now</span>
       </div>
 
       <div class="flex items-center gap-4 px-6 py-4 hover:bg-white/30">
-        <img src="https://randomuser.me/api/portraits/men/21.jpg" class="w-12 h-12 rounded-full" />
-        <div class="flex-1">
-          <p class="font-medium">Amit Kumar</p>
-          <p class="text-sm text-slate-600 truncate">Looks clean and calm</p>
+        <div class="w-12 h-12 rounded-full bg-sky1 text-white flex items-center justify-center font-semibold text-lg">
+          K
         </div>
-        <span class="text-xs text-slate-500">10:22</span>
+        <div class="flex-1">
+          <p class="font-medium">Karan Patel</p>
+          <p class="text-sm text-slate-600 truncate">Clean UI 👍</p>
+        </div>
+        <span class="text-xs text-slate-500">10:15</span>
       </div>
 
       <div class="flex items-center gap-4 px-6 py-4 hover:bg-white/30">
-        <img src="https://randomuser.me/api/portraits/men/31.jpg" class="w-12 h-12 rounded-full" />
+        <div class="w-12 h-12 rounded-full bg-sky3 text-skyDark flex items-center justify-center font-semibold text-lg">
+          M
+        </div>
         <div class="flex-1">
-          <p class="font-medium">Sandeep Singh</p>
-          <p class="text-sm text-slate-600 truncate">Ready for presentation</p>
+          <p class="font-medium">Manish Gupta</p>
+          <p class="text-sm text-slate-600 truncate">Reviewed design</p>
         </div>
         <span class="text-xs text-slate-500">Yesterday</span>
       </div>
 
       <div class="flex items-center gap-4 px-6 py-4 hover:bg-white/30">
-        <img src="https://randomuser.me/api/portraits/men/41.jpg" class="w-12 h-12 rounded-full" />
+        <div class="w-12 h-12 rounded-full bg-sky1 text-white flex items-center justify-center font-semibold text-lg">
+          N
+        </div>
         <div class="flex-1">
-          <p class="font-medium">Rohit Mehta</p>
-          <p class="text-sm text-slate-600 truncate">UI is very professional</p>
+          <p class="font-medium">Nitin Joshi</p>
+          <p class="text-sm text-slate-600 truncate">Enterprise ready</p>
         </div>
         <span class="text-xs text-slate-500">Mon</span>
       </div>
 
       <div class="flex items-center gap-4 px-6 py-4 hover:bg-white/30">
-        <img src="https://randomuser.me/api/portraits/men/51.jpg" class="w-12 h-12 rounded-full" />
+        <div class="w-12 h-12 rounded-full bg-sky2 text-white flex items-center justify-center font-semibold text-lg">
+          R
+        </div>
         <div class="flex-1">
-          <p class="font-medium">Vikas Iyer</p>
-          <p class="text-sm text-slate-600 truncate">Deploying to production</p>
+          <p class="font-medium">Rakesh Nair</p>
+          <p class="text-sm text-slate-600 truncate">Deploying now</p>
         </div>
         <span class="text-xs text-slate-500">Sun</span>
       </div>
@@ -100,13 +104,15 @@
     </div>
   </aside>
 
-  <!-- ============ CHAT AREA ============ -->
-  <main class="flex-1 rounded-3xl bg-glass backdrop-blur-xl border border-white/40 flex flex-col shadow-2xl">
+  <!-- CHAT AREA -->
+  <main class="flex-1 rounded-3xl bg-glass backdrop-blur-xl border border-white/40 shadow-2xl flex flex-col">
 
     <header class="px-8 py-6 border-b border-white/30 flex items-center gap-4">
-      <img src="https://randomuser.me/api/portraits/men/11.jpg" class="w-12 h-12 rounded-full" />
+      <div class="w-12 h-12 rounded-full bg-sky2 text-white flex items-center justify-center font-semibold text-lg">
+        A
+      </div>
       <div>
-        <p class="font-semibold text-lg text-skyDark">Rahul Verma</p>
+        <p class="font-semibold text-lg text-skyDark">Arjun Malhotra</p>
         <p class="text-sm text-sky2">online</p>
       </div>
     </header>
@@ -115,29 +121,15 @@
 
       <div class="flex">
         <div class="bg-white/60 px-5 py-3 rounded-2xl max-w-lg shadow">
-          This sky-blue theme looks very professional and calm.
+          Initial avatars make it look very professional.
           <div class="text-right text-xs text-slate-500 mt-1">10:30</div>
         </div>
       </div>
 
       <div class="flex justify-end">
         <div class="bg-gradient-to-r from-sky1 to-sky2 text-white px-5 py-3 rounded-2xl max-w-lg shadow-lg">
-          Yes, it fits perfectly for corporate SaaS dashboards.
+          Yes, this is common in enterprise chat apps.
           <div class="text-right text-xs text-white/80 mt-1">10:31 ✓✓</div>
-        </div>
-      </div>
-
-      <div class="flex">
-        <div class="bg-white/60 px-5 py-3 rounded-2xl max-w-lg shadow">
-          Recruiters will definitely like this clean design.
-          <div class="text-right text-xs text-slate-500 mt-1">10:32</div>
-        </div>
-      </div>
-
-      <div class="flex justify-end">
-        <div class="bg-gradient-to-r from-sky3 to-sky1 text-white px-5 py-3 rounded-2xl max-w-lg shadow-lg">
-          That was exactly the goal.
-          <div class="text-right text-xs text-white/80 mt-1">10:33 ✓✓</div>
         </div>
       </div>
 
